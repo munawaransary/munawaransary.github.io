@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://munawaransary.github.io/portfolio/sitemap-index.xml
-Host: https://munawaransary.github.io
+Sitemap: https://imansary.pro.bd/portfolio/sitemap-index.xml
+Host: https://imansary.pro.bd
