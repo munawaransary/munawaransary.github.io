@@ -360,7 +360,7 @@ const Featured = () => {
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
-                <div className="project-content">
+                <div className="project-content" style={{ position: 'relative', zIndex: 5 }}>
                   <div>
                     <p className="project-overline">Featured Project</p>
 

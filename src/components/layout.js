@@ -12,7 +12,10 @@ const StyledContent = styled.div`
 
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
-  const [isLoading, setIsLoading] = useState(isHome);
+  // Render content immediately instead of gating it behind the intro loader
+  // animation (the anime.js loader could hang and leave the page stuck on the
+  // spinner, never revealing content).
+  const [isLoading, setIsLoading] = useState(false);
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {

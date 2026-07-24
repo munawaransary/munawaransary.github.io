@@ -1,5 +1,5 @@
 ---
-date: '2025-09-01'
+date: '2026-08-01'
 title: 'Machine Learning Engineer'
 company: 'Innospace Infotech Ltd.'
 location: 'Dhaka, Bangladesh'
@@ -7,9 +7,9 @@ range: 'September 2025 - Present'
 url: 'https://innospace.com.bd/'
 ---
 
-- Worked on Innovert, a system that converts specific fonts to Unicode to streamline Lecture Publications
-- Built a Full Question Formatting pipeline that processes OCR inputs (images or text) and generates structured exam-ready content for the Brritto app
-- Contributing to a chatbot project using Retrieval-Augmented Generation (RAG) to enhance accuracy and context-aware responses
-- Building a QA validation system using GPToss20B + QWEN 3 (Vision-Language model) for rectifying uploaded questions with mistakes
-- Creating an AI agent for communicating in FB/WhatsApp through n8n
+- Shipped a production RAG chatbot ([live on Brritto](https://brritto.com/ai)) that answers user questions with context-aware, retrieval-grounded responses
+- Built a GPT-OSS-20B + Qwen3-VL vision-language QA system that detects and rectifies errors in uploaded questions before publication
+- Built an OCR-to-structured-content pipeline that converts scanned exam papers (image or text) into exam-ready question sets for the Brritto app
+- Engineered Innovert, a legacy-font-to-Unicode conversion system for a national publisher, and deployed it to production on AWS EC2 with systemd
+- Built AI agents for automated communication over Facebook and WhatsApp using n8n
 

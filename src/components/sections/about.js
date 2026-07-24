@@ -142,7 +142,7 @@ const About = () => {
 
             <p>
               Fast-forward to today, and I've had the privilege of working at{' '}
-              <a href="https://innospace.com.bd/">Innospace Infotech Ltd.</a> as a Junior Machine Learning Engineer,{' '}
+              <a href="https://innospace.com.bd/">Innospace Infotech Ltd.</a> as a Machine Learning Engineer,{' '}
               <a href="https://datasoft-bd.com/">DataSoft</a> as an intern, and{' '}
               <a href="https://www.bracu.ac.bd/">BRAC University</a> as a Student Tutor. 
               My main focus these days is building RAG-based chatbots, computer vision systems, and NLP pipelines 

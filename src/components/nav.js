@@ -118,7 +118,9 @@ const StyledLinks = styled.div`
   }
 
   ol {
-    ${({ theme }) => theme.mixins.flexBetween};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -206,7 +208,22 @@ const Nav = ({ isHome }) => {
   );
 
   const ResumeLink = (
-    <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+    <a
+      className="resume-button"
+      href="/resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        color: 'var(--green)',
+        border: '1px solid var(--green)',
+        borderRadius: 'var(--border-radius)',
+        padding: '10px 16px',
+        fontSize: 'var(--fz-xs)',
+        fontFamily: 'var(--font-mono)',
+        textDecoration: 'none',
+        whiteSpace: 'nowrap',
+        lineHeight: 1,
+      }}>
       Resume
     </a>
   );
@@ -218,12 +235,24 @@ const Nav = ({ isHome }) => {
           <>
             {Logo}
 
-            <StyledLinks>
-              <ol>
+            <StyledLinks style={{ display: 'flex', alignItems: 'center', gap: '25px' }}>
+              <ol
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  gap: '25px',
+                  flexShrink: 0,
+                  margin: 0,
+                  padding: 0,
+                  listStyle: 'none',
+                }}>
                 {navLinks &&
                   navLinks.map(({ url, name }, i) => (
-                    <li key={i}>
-                      <Link to={url}>{name}</Link>
+                    <li key={i} style={{ flex: '0 0 auto', whiteSpace: 'nowrap' }}>
+                      <Link to={url} style={{ padding: '10px', width: 'auto' }}>
+                        {name}
+                      </Link>
                     </li>
                   ))}
               </ol>
@@ -242,15 +271,33 @@ const Nav = ({ isHome }) => {
               )}
             </TransitionGroup>
 
-            <StyledLinks>
-              <ol>
+            <StyledLinks style={{ display: 'flex', alignItems: 'center', gap: '25px' }}>
+              <ol
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  gap: '25px',
+                  flexShrink: 0,
+                  margin: 0,
+                  padding: 0,
+                  listStyle: 'none',
+                }}>
                 <TransitionGroup component={null}>
                   {isMounted &&
                     navLinks &&
                     navLinks.map(({ url, name }, i) => (
                       <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
-                        <li key={i} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
-                          <Link to={url}>{name}</Link>
+                        <li
+                          key={i}
+                          style={{
+                            transitionDelay: `${isHome ? i * 100 : 0}ms`,
+                            flex: '0 0 auto',
+                            whiteSpace: 'nowrap',
+                          }}>
+                          <Link to={url} style={{ padding: '10px', width: 'auto' }}>
+                            {name}
+                          </Link>
                         </li>
                       </CSSTransition>
                     ))}
