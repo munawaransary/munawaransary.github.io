@@ -214,6 +214,11 @@ const Nav = ({ isHome }) => {
       target="_blank"
       rel="noopener noreferrer"
       style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 'auto',
+        boxSizing: 'border-box',
         color: 'var(--green)',
         border: '1px solid var(--green)',
         borderRadius: 'var(--border-radius)',
@@ -256,7 +261,7 @@ const Nav = ({ isHome }) => {
                     </li>
                   ))}
               </ol>
-              <div>{ResumeLink}</div>
+              <div style={{ flex: '0 0 auto', display: 'flex', alignItems: 'center' }}>{ResumeLink}</div>
             </StyledLinks>
 
             <Menu />
@@ -307,7 +312,13 @@ const Nav = ({ isHome }) => {
               <TransitionGroup component={null}>
                 {isMounted && (
                   <CSSTransition classNames={fadeDownClass} timeout={timeout}>
-                    <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
+                    <div
+                      style={{
+                        transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms`,
+                        flex: '0 0 auto',
+                        display: 'flex',
+                        alignItems: 'center',
+                      }}>
                       {ResumeLink}
                     </div>
                   </CSSTransition>
